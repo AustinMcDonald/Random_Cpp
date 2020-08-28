@@ -30,6 +30,7 @@ static inline uint64_t rotl(const uint64_t x, int k) ;
 
 static uint64_t seed_ ;
 uint64_t SplitMix64_next(void);
+void pprint(void);
 static uint64_t s[4];
 
 

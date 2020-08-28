@@ -24,6 +24,8 @@ See <http://creativecommons.org/publicdomain/zero/1.0/>. */
    output to fill s. */
 
 
+#include <iostream>
+
 
 static inline uint64_t rotl(const uint64_t x, int k) {
 	return (x << k) | (x >> (64 - k));
@@ -38,9 +40,18 @@ uint64_t SplitMix64_next(void) {
 	return z ^ (z >> 31);
 }
 
-// static uint64_t s[4]={23478234234,2342342345,234234121323,2234453453};
+static uint64_t s[4]={23478234234,2342342345,234234121323,2234453453};
 
-static uint64_t s[4]={SplitMix64_next(),SplitMix64_next(),SplitMix64_next(),SplitMix64_next()};
+// static uint64_t s[4]={SplitMix64_next(),SplitMix64_next(),SplitMix64_next(),SplitMix64_next()};
+
+void pprint(void)
+{
+	for (int i=0; i<4 ; i++)
+    {
+        std::cout << s[i] << std::endl;
+    }
+
+}
 
 
 double next(void) {
