@@ -185,9 +185,6 @@ int main ()
 
 
 
-
-
-
     // std::array<std::uint64_t, 4> seeds_ = seeder_<4>();
     // for (int i=0; i<SplitMix64_seeds_.size() ; i++)
     // {
@@ -202,15 +199,6 @@ int main ()
     std::cout<< "100 000 000 random numbers (XorShift256) took "<<time<<" Seconds"<<std::endl;
     std::cout<< "Per loop is  "<<(time/100000000)*1e9<<" nano seconds"<<std::endl;
 
-    // std::ofstream myfile;    
-    // int Nloop = 1000000;
-    // myfile.open ("RandomUniform.txt");
-    // for(int i=0;i<Nloop;++i)
-    // {
-    //     //std::cout<< Qpix::RandomUniform()  <<std::endl;
-    //     myfile << rando.next() <<std::endl;
-    // }
-    // myfile.close();
 
     time_req = clock();
     for(int i=0;i<100000000;++i){drand48();}
